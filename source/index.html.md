@@ -1,9 +1,6 @@
 ---
 title: OKCash Documentation
 
-language_tabs:
-  - javascript
-
 toc_footers:
 - <a href='http://okcash.co'>OKCash Website</a>
 - <a href='http://okcash.co/#jf_download'>Download</a>
@@ -18,37 +15,75 @@ search: true
 
 # About
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+## History
 
 # Community
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+## Forums
+- [OKCash Talk](http://okcashtalk.org)
+- [Reddit's OKCash Community](http://reddit.com/r/OKcash/)
+- [Bitcoin Talk Forum](https://bitcointalk.org/index.php?topic=1028368.0)
+- [Bitcoin Garden](http://bitcoingarden.tk/forum/index.php?topic=3941.0)
+- [Cryptopia](https://www.cryptopia.co.nz/Forum/Thread/449)
+- [Cryptos US](http://cryptos.us/forum/announcements/72-ann-ok-ok-cryptocurrency-efficient-crypto-bittrex-rokos-pi-os)
+- [Altcoins Foundation](https://altcoinsfoundation.com/forum/ann-altcoins/15-okcash-ok-cryptocurrency-fast-and-efficient-crypto)
+- [All Crypto Talk](https://allcryptotalk.com/index.php?/topic/1833-ann-ok-ok-cryptocurrency-okcash-efficient-crypto-pos-social/)
+- [Crypto Coin Talk](https://cryptocointalk.com/topic/39002-ann-ok-ok-cryptocurrency-okcash-efficient-crypto-pos/)
+- [RaspberryPi](https://www.raspberrypi.org/forums/viewtopic.php?f=41&t=112913)
+- [Foro-PTC](http://www.foro-ptc.com/cryptomonedas-138/okcash-criptomoneda-pos-para-minar-en-raspberry-69-anual-119727/)
+- [ForoBits](https://forobits.com/t/okcash-hilo-general/1347)
 
 ## Social Media
+- [Twitter](https://twitter.com/OKCashCrypto)
+- [Facebook](https://facebook.com/OKCashCrypto)
+- [Instagram](https://instagram.com/okcashcrypto)
+- [Google+](https://plus.google.com/+PimpCashMe)
+- [YouTube](https://youtube.com/channel/UC5BCYmlBtPZiC7NNv-a5gfA)
+- [Pinterest](https://pinterest.com/okcash)
+- [Tumblr](http://updates.okcash.co/)
+- [About Me](http://about.me/okcash)
+- [Voat](https://voat.co/v/ok)
 
-Below you will find a list of places where you can find other Shadow users, community members and news.
+## OK Discord Chat
+- [Discord](http://discord.me/cryptocurrency)
 
-- Discord: [discord.me/cryptocurrency](http://discord.me/cryptocurrency)
-- Forum: [okcashtalk.org](http://okcashtalk.org)
-- Twitter: [twitter.com/OKCashCrypto](https://twitter.com/OKCashCrypto)
-- Facebook: [facebook.com/OKCashCrypto](https://facebook.com/OKCashCrypto)
-- Instagram: [instagram.com/okcashcrypto](https://instagram.com/okcashcrypto)
-- Google+: [plus.google.com/+PimpCashMe](https://plus.google.com/+PimpCashMe)
-- YouTube: [youtube.com/channel/UC5BCYmlBtPZiC7NNv-a5gfA](https://youtube.com/channel/UC5BCYmlBtPZiC7NNv-a5gfA)
-- Pinterest: [pinterest.com/okcash](https://pinterest.com/okcash)
-- Reddit: [reddit.com/r/OKcash](https://reddit.com/r/OKcash)
+## Tip Bots
+- [OKCashTip at Twitter](https://twitter.com/okcashtip/)
+- [OKCashTip at Reddit](https://www.reddit.com/r/OKcash/comments/3i97g0/okcash_tip_bot/)
+
+# Currency
+
+## Specification
+
+## Transactions
+
+## Exchanges
+
+Currently you can buy and sell OKCash (OK) for Bitcoin, Doge, Dots, USD, EURO and more.
+
+OKCash is available at these exchanges:
+
+- [Bleutrade](https://bleutrade.com/exchange/OK/BTC)
+- [BTCPOP](https://btcpop.co/Exchange/OK)
+- [Bittrex](https://www.bittrex.com/Market/Index?MarketName=BTC-OK)
+- [Bitsquare](https://bitsquare.io/)
+- [Cripto-Pay](https://cripto-pay.com/)
+- [Cryptopia](https://www.cryptopia.co.nz/Exchange?id=1298)
+- [YoBit](https://yobit.net/en/trade/OK/BTC)
+
+# Core
+
+## Introduction
+
+## GUI
 
 # Download
 
 Select your OK wallet & Start gaining the benefits of using OKCash Today.
+
+<aside class="success">
+Files Distribution powered by dropbox.com secure encrypted files services.
+</aside>
 
 ## IoT Wallet
 - Latest [Pine64](http://bit.ly/OKpine64) download.
@@ -70,12 +105,77 @@ Select your OK wallet & Start gaining the benefits of using OKCash Today.
 - Latest [AUR](https://aur.archlinux.org/packages/?O=0&SeB=nd&K=okcash&outdated=&SB=n&SO=a&PP=50&do_Search=Go) download.
 
 ## Web Wallet
-- Latest [Cripto-Pay](https://cripto-pay.com) download.
-- Latest [CoinToPay](https://cointopay.com) download.
+- [Cripto-Pay](https://cripto-pay.com)
+- [CoinToPay](https://cointopay.com)
 
 ## Off-line Wallet
-- Latest [Paper](http://paperwallets.okcash.co) download.
+- Latest [Paper Wallet](http://paperwallets.okcash.co) download.
+
+## ROKOS
+- Latest [ROKOS](http://rokos.space) download.
+
+First fully optimized  Operating System for IoT devices (Raspberry Pi [zero, 2, 3], BananaPi, Pine64+) with Bitcoin, OKCash, OpenBazaar and more cryptocurrencies and decentralized tech.
 
 ## Bootstrap?
 
-<aside class="notice">Use this method to synchronize your node within 10 minutes!</aside>
+<aside class="notice">
+Use this method to synchronize your node in minutes!
+</aside>
+
+When you load the OK Wallet for the first time it connects to the peer-to-peer network and starts to synchronize the OK blockchain.
+
+### When to use the ok-blockchain to Sync your OK wallet
+
+The first time sync of the OK blockchain can take quite a while; sometimes up to 24 hours depending on your hardware.
+
+With OK you can speed up this process by loading compressed backups of the OK blockchain.
+
+Adding the current ok-blockchain to your local okcash data directory speeds up the synchronization process which will get your wallet up and running in minutes.
+
+### How to use the ok-blockchain to sync your OK wallet
+
+1. Close the OK Wallet and download the latest ok-blockchain.zip file from: [Releases](https://github.com/okcashpro/ok-blockchain/releases)
+
+2. Place the ok-blockchain.zip file in the Okcash data directory, location depends on your operating system.
+
+3. Unzip the ok-blockchain.zip file. `(includes txleveldb folder + blk0001.dat files)`
+
+4. Start your OK Wallet and give it some minutes to finish it's first time Sync process. `(The client might be unresponsive but don’t worry - it’s just loading and verifying all the ok-blockchain data)`
+
+## Useful Paths
+```
+Linux and IoT devices:
+```
+>~/.okcash/
+
+```
+Mac OS X
+```
+>~/Library/Application Support/Okcash/
+
+```
+Windows
+```
+>%APPDATA%\OKCash
+
+>This defaults on:
+>Windows XP: `C:\Documents and Settings\YourUserName\Application data\OKCash`
+>Windows Vista, 7, 8, and 10: `C:\Users\YourUserName\Appdata\Roaming\OKCash`
+
+<aside class="warning">
+Warning: deleting the wallet.dat file in this directory will cause you to lose all of your coins if you have no back up.
+</aside>
+
+These are the paths where your **blockchain data, wallet and pretty much everything related to OKCash** is stored.
+
+When using the ok-blockchain.zip method these are the location where you extract the ok-blockchain.zip file.
+
+# Support
+
+# Contribute
+
+## Code
+
+## Donate
+
+## Report
