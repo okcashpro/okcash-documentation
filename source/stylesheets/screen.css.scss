@@ -1,12 +1,9 @@
 @charset "utf-8";
-
 @import url("//fonts.googleapis.com/css?family=Open+Sans:400,600,700");
 @import url("//fonts.googleapis.com/css?family=Raleway:300,500,700");
-
 @import 'normalize';
 @import 'variables';
 @import 'icon-font';
-
 /*
 Copyright 2008-2013 Concur Technologies, Inc.
 
@@ -22,46 +19,36 @@ WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
 License for the specific language governing permissions and limitations
 under the License.
 */
-
 ////////////////////////////////////////////////////////////////////////////////
 // GENERAL STUFF
 ////////////////////////////////////////////////////////////////////////////////
-
-html, body {
-  color: $main-text;
-  padding: 0;
+body,
+html {
+  height: 100%;
   margin: 0;
+  padding: 0;
+  color: $main-text;
+  background-color: $main-bg;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   @extend %default-font;
-  background-color: $main-bg;
-  height: 100%;
-  -webkit-text-size-adjust: none; /* Never autoresize text */
+  -webkit-text-size-adjust: none;
+  /* Never autoresize text */
 }
-
 ////////////////////////////////////////////////////////////////////////////////
 // TABLE OF CONTENTS
 ////////////////////////////////////////////////////////////////////////////////
-
 #toc > ul > li > a > span {
   float: right;
-  background-color: #2484FF;
-  border-radius: 40px;
   width: 20px;
+  border-radius: 40px;
+  background-color: #2484ff;
 }
-
 @mixin embossed-bg {
-  background:
-    linear-gradient(to bottom, rgba(#000, 0.2), rgba(#000, 0) 8px),
-    linear-gradient(to top, rgba(#000, 0.2), rgba(#000, 0) 8px),
-    linear-gradient(to bottom, rgba($nav-embossed-border-top, 1), rgba($nav-embossed-border-top, 0) 1.5px),
-    linear-gradient(to top, rgba($nav-embossed-border-bottom, 1), rgba($nav-embossed-border-bottom, 0) 1.5px),
-    $nav-subitem-bg;
+  background: linear-gradient(to bottom, rgba(#000, .2), rgba(#000, 0) 8px), linear-gradient(to top, rgba(#000, .2), rgba(#000, 0) 8px), linear-gradient(to bottom, rgba($nav-embossed-border-top, 1), rgba($nav-embossed-border-top, 0) 1.5px), linear-gradient(to top, rgba($nav-embossed-border-bottom, 1), rgba($nav-embossed-border-bottom, 0) 1.5px), $nav-subitem-bg;
 }
-
 .tocify-wrapper {
   transition: left 0.3s ease-in-out;
-
   overflow-y: auto;
   overflow-x: hidden;
   position: fixed;
@@ -73,7 +60,6 @@ html, body {
   background-color: $nav-bg;
   font-size: 13px;
   font-weight: bold;
-
   // language selector for mobile devices
   .lang-selector {
     display: none;
@@ -82,16 +68,13 @@ html, body {
       padding-bottom: 0.5em;
     }
   }
-
   // This is the logo at the top of the ToC
-  &>img {
+  & > img {
     display: block;
     max-width: 100%;
   }
-
-  &>.search {
+  & > .search {
     position: relative;
-
     input {
       background: $nav-bg;
       border-width: 0 0 1px 0;
@@ -102,9 +85,9 @@ html, body {
       width: $nav-width - 30;
       outline: none;
       color: $nav-text;
-      border-radius: 0; /* ios has a default border radius */
+      border-radius: 0;
+      /* ios has a default border radius */
     }
-
     &:before {
       position: absolute;
       top: 17px;
@@ -113,11 +96,9 @@ html, body {
       @extend %icon-search;
     }
   }
-
   img+.tocify {
     margin-top: $logo-margin;
   }
-
   .search-results {
     margin-top: 0;
     box-sizing: border-box;
@@ -131,104 +112,90 @@ html, body {
       height: 30%;
       margin-bottom: 1em;
     }
-
     @include embossed-bg;
-
     li {
       margin: 1em $nav-padding;
       line-height: 1;
     }
-
     a {
       color: $nav-text;
       text-decoration: none;
-
       &:hover {
         text-decoration: underline;
       }
     }
   }
-
-
-  .tocify-item>a, .toc-footer li {
-    padding: 0 $nav-padding 0 $nav-padding;
+  .toc-footer li,
+  .tocify-item > a {
+    padding: 0 $nav-padding;
     display: block;
     overflow-x: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
   }
-
   // The Table of Contents is composed of multiple nested
   // unordered lists.  These styles remove the default
   // styling of an unordered list because it is ugly.
-  ul, li {
+  li,
+  ul {
     list-style: none;
     margin: 0;
     padding: 0;
     line-height: 28px;
   }
-
   li {
     color: $nav-text;
     transition-property: background;
     transition-timing-function: linear;
     transition-duration: 230ms;
   }
-
   // This is the currently selected ToC entry
   .tocify-focus {
-    box-shadow: 0px 1px 0px $nav-active-shadow;
+    box-shadow: 0 1px 0 $nav-active-shadow;
     background-color: $nav-active-bg;
     color: $nav-active-text;
   }
-
   // Subheaders are the submenus that slide open
   // in the table of contents.
   .tocify-subheader {
     display: none; // tocify will override this when needed
     background-color: $nav-subitem-bg;
     font-weight: 500;
-    .tocify-item>a {
+    .tocify-item > a {
       padding-left: $nav-padding + $nav-indent;
       font-size: 12px;
     }
-
     // for embossed look:
     @include embossed-bg;
-    &>li:last-child {
+    & > li:last-child {
       box-shadow: none; // otherwise it'll overflow out of the subheader
     }
   }
-
   .toc-footer {
     padding: 1em 0;
     margin-top: 1em;
     border-top: 1px dashed $nav-footer-border-color;
-
-    li,a {
+    a,
+    li {
       color: $nav-text;
       text-decoration: none;
     }
-
     a:hover {
       text-decoration: underline;
     }
-
     li {
       font-size: 0.8em;
       line-height: 1.7;
       text-decoration: none;
     }
   }
-
 }
-
 // button to show navigation on mobile devices
 #nav-button {
   span {
     display: block;
     $side-pad: $main-padding / 2 - 8px;
-    padding: $side-pad $side-pad $side-pad;
+    padding: $side-pad;
     background-color: rgba($main-bg, 0.7);
     transform-origin: 0 0;
     transform: rotate(-90deg) translate(-100%, 0);
@@ -249,27 +216,24 @@ html, body {
     height: 16px;
     vertical-align: bottom;
   }
-
   transition: left 0.3s ease-in-out;
-
-  &:hover { opacity: 1; }
-  &.open {left: $nav-width}
+  &:hover {
+    opacity: 1;
+  }
+  &.open {
+    left: $nav-width;
+  }
 }
-
-
 ////////////////////////////////////////////////////////////////////////////////
 // PAGE LAYOUT AND CODE SAMPLE BACKGROUND
 ////////////////////////////////////////////////////////////////////////////////
-
 .page-wrapper {
   margin-left: $nav-width;
   position: relative;
   z-index: 10;
   background-color: $page-wrapper-bg;
   min-height: 100%;
-
   padding-bottom: 1px; // prevent margin overflow
-
   // The dark box is what gives the code samples their dark background.
   // It sits essentially under the actual content block, which has a
   // transparent background.
@@ -283,80 +247,90 @@ html, body {
     top: 0;
     bottom: 0;
   }
-
   .lang-selector {
     position: fixed;
     z-index: 50;
     border-bottom: 5px solid $lang-select-active-bg;
   }
+  a {
+  	color: #0165a4;
+  	text-decoration: none;
+	&:hover,
+	&:focus {
+	  text-decoration: underline;
+	}
+  }
 }
-
 .lang-selector {
   background-color: $lang-select-bg;
   width: 100%;
   font-weight: bold;
   a {
     display: block;
-    float:left;
+    float: left;
     color: $lang-select-text;
     text-decoration: none;
     padding: 0 10px;
     line-height: 30px;
     outline: 0;
-
-    &:active, &:focus {
+    &:active,
+    &:focus {
       background-color: $lang-select-pressed-bg;
       color: $lang-select-pressed-text;
     }
-
     &.active {
       background-color: $lang-select-active-bg;
       color: $lang-select-active-text;
     }
   }
-
   &:after {
     content: '';
     clear: both;
     display: block;
   }
 }
-
 ////////////////////////////////////////////////////////////////////////////////
 // CONTENT STYLES
 ////////////////////////////////////////////////////////////////////////////////
 // This is all the stuff with the light background in the left half of the page
-
 .content {
   // to place content above the dark box
   position: relative;
   z-index: 30;
-
   &:after {
     content: '';
     display: block;
     clear: both;
   }
-
-  &>h1, &>h2, &>h3, &>h4, &>h5, &>h6, &>p, &>table, &>ul, &>ol, &>aside, &>dl {
+  & > aside,
+  & > dl,
+  & > h1,
+  & > h2,
+  & > h3,
+  & > h4,
+  & > h5,
+  & > h6,
+  & > ol,
+  & > p,
+  & > table,
+  & > ul {
     margin-right: $examples-width;
     padding: 0 $main-padding;
     box-sizing: border-box;
     display: block;
     text-shadow: $main-embossed-text-shadow;
-
     @extend %left-col;
   }
-
-  &>ul, &>ol {
+  & > ol,
+  & > ul {
     padding-left: $main-padding + 15px;
   }
-
   // the div is the tocify hidden div for placeholding stuff
-  &>h1, &>h2, &>div {
-    clear:both;
+  & > div,
+  & > h1,
+  & > h2 {
+    clear: both;
   }
-
   h1 {
     @extend %header-font;
     font-size: 30px;
@@ -368,12 +342,11 @@ html, body {
     border-top: 1px solid #ddd;
     background-image: linear-gradient(to bottom, #fff, #f9f9f9);
   }
-
-  h1:first-child, div:first-child + h1 {
+  div:first-child + h1,
+  h1:first-child {
     border-top-width: 0;
     margin-top: 0;
   }
-
   h2 {
     @extend %header-font;
     font-size: 20px;
@@ -384,80 +357,75 @@ html, body {
     padding-bottom: 1.2em;
     background-image: linear-gradient(to bottom, rgba(#fff, 0.4), rgba(#fff, 0));
   }
-
   // h2s right after h1s should bump right up
   // against the h1s.
-  h1 + h2, h1 + div + h2 {
+  h1 + div + h2,
+  h1 + h2 {
     margin-top: $h1-margin-bottom * -1;
     border-top: none;
   }
-
-  h3, h4, h5, h6 {
+  h3,
+  h4,
+  h5,
+  h6 {
     @extend %header-font;
     font-size: 15px;
     margin-top: 2.5em;
     margin-bottom: 0.8em;
   }
-
-  h4, h5, h6 {
+  h4,
+  h5,
+  h6 {
     font-size: 10px;
   }
-
   hr {
     margin: 2em 0;
     border-top: 2px solid $examples-bg;
     border-bottom: 2px solid $main-bg;
   }
-
   table {
     margin-bottom: 1em;
     overflow: auto;
-    th,td {
+    td,
+    th {
       text-align: left;
       vertical-align: top;
       line-height: 1.6;
     }
-
     th {
       padding: 5px 10px;
       border-bottom: 1px solid #ccc;
       vertical-align: bottom;
     }
-
     td {
       padding: 10px;
     }
-
     tr:last-child {
       border-bottom: 1px solid #ccc;
     }
-
-    tr:nth-child(odd)>td {
+    tr:nth-child(odd) > td {
       background-color: lighten($main-bg,4.2%);
     }
-
-    tr:nth-child(even)>td {
+    tr:nth-child(even) > td {
       background-color: lighten($main-bg,2.4%);
     }
   }
-
   dt {
     font-weight: bold;
   }
-
   dd {
     margin-left: 15px;
   }
-
-  p, li, dt, dd {
+  dd,
+  dt,
+  li,
+  p {
     line-height: 1.6;
     margin-top: 0;
   }
-
   img {
     max-width: 100%;
   }
-
   code {
     background-color: rgba(0,0,0,0.05);
     padding: 3px;
@@ -465,12 +433,10 @@ html, body {
     @extend %break-words;
     @extend %code-font;
   }
-
-  pre>code {
+  pre > code {
     background-color: transparent;
     padding: 0;
   }
-
   aside {
     padding-top: 1em;
     padding-bottom: 1em;
@@ -479,36 +445,29 @@ html, body {
     margin-bottom: 1.5em;
     background: $aside-notice-bg;
     line-height: 1.6;
-
     &.warning {
       background-color: $aside-warning-bg;
       text-shadow: 0 1px 0 lighten($aside-warning-bg, 15%);
     }
-
     &.success {
       background-color: $aside-success-bg;
       text-shadow: 0 1px 0 lighten($aside-success-bg, 15%);
     }
   }
-
   aside:before {
     vertical-align: middle;
     padding-right: 0.5em;
     font-size: 14px;
   }
-
   aside.notice:before {
     @extend %icon-info-sign;
   }
-
   aside.warning:before {
     @extend %icon-exclamation-sign;
   }
-
   aside.success:before {
     @extend %icon-ok-sign;
   }
-
   .search-highlight {
     padding: 2px;
     margin: -2px;
@@ -518,115 +477,98 @@ html, body {
     background: linear-gradient(to top left, #F7E633 0%, #F1D32F 100%);
   }
 }
-
 ////////////////////////////////////////////////////////////////////////////////
 // CODE SAMPLE STYLES
 ////////////////////////////////////////////////////////////////////////////////
 // This is all the stuff that appears in the right half of the page
-
 .content {
-  pre, blockquote {
+  blockquote,
+  pre {
     background-color: $code-bg;
     color: #fff;
-
     margin: 0 0 0 30px;
     width: $examples-width;
-
-    float:right;
-    clear:right;
-
+    float: right;
+    clear: right;
     box-sizing: border-box;
-
     @extend %right-col;
-
-    &>p { margin: 0; }
-
+    & > p {
+      margin: 0;
+    }
     a {
       color: #fff;
       text-decoration: none;
       border-bottom: dashed 1px #ccc;
     }
   }
-
   pre {
     padding: 17px 20px !important;
     white-space: pre-line;
     @extend %code-font;
   }
-
   blockquote {
-    &>p {
+    & > p {
       background-color: $code-annotation-bg;
       border-top: 1px solid #000;
       border-bottom: 1px solid #404040;
       padding: $code-annotation-padding;
       color: #ccc;
       white-space: pre-line;
-	  @extend %break-words;
+      @extend %break-words;
     }
   }
 }
-
 ////////////////////////////////////////////////////////////////////////////////
 // RESPONSIVE DESIGN
 ////////////////////////////////////////////////////////////////////////////////
 // These are the styles for phones and tablets
 // There are also a couple styles disperesed
-
 @media (max-width: $tablet-width) {
   .tocify-wrapper {
     left: -$nav-width;
-
     &.open {
       left: 0;
     }
   }
-
   .page-wrapper {
     margin-left: 0;
   }
-
   #nav-button {
     display: block;
   }
-
   .tocify-wrapper .tocify-item > a {
     padding-top: 0.3em;
     padding-bottom: 0.3em;
   }
 }
-
 @media (max-width: $phone-width) {
   .dark-box {
     display: none;
   }
-
   %left-col {
     margin-right: 0;
   }
-
   .tocify-wrapper .lang-selector {
     display: block;
   }
-
   .page-wrapper .lang-selector {
     display: none;
   }
-
   %right-col {
     width: auto;
     float: none;
   }
-
   %right-col + %left-col {
     margin-top: $main-padding;
   }
 }
-
-.highlight .c, .highlight .cm, .highlight .c1, .highlight .cs {
+.highlight .c,
+.highlight .c1,
+.highlight .cm,
+.highlight .cs {
   color: #909090;
 }
-
-.highlight, .highlight .w {
+.highlight,
+.highlight .w {
   background-color: $code-bg;
 }
